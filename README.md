@@ -1,4 +1,4 @@
-# DISEÑO E IMPLEMENTACIÓN DE UNA SOLUCIÓN DE BIG DATA PARA LA TRANSFORMACIÓN Y ANÁLISIS DEL ESTADO DE RESULTADOS POR AGENCIAS – CONFIAR COOPERATIVA FINANCIERA
+# Solución de Big Data aplicado al análisis del PyG de las Agencias Confiar.
 
 **Estudiantes:** Paola Duque Cardona
                  Ana Carolina Osorio 
