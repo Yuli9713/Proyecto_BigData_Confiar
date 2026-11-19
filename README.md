@@ -16,7 +16,7 @@ Por lo anterior, se plantea desarrollar una solución que permita automatizar el
 ## Objetivo General
 Diseñar e implementar una solución para el procesamiento y análisis de datos que permita automatizar la transformación, clasificación y consolidación de los movimientos contables de Confiar Cooperativa Financiera, con el propósito de facilitar la construcción y análisis del estado de resultados por agencias y periodos, apoyando la toma de decisiones mediante herramientas de analítica y visualización.
 
-## Objetivos Especificos
+## Objetivos Específicos
  - Analizar la estructura y composición de los libros auxiliares contables generados por el ERP de Confiar Cooperativa Financiera, identificando las variables necesarias para la construcción del estado de resultados.
  - Diseñar un proceso de transformación de datos que permita clasificar y asociar las cuentas contables a las categorías de ingresos, gastos y demás componentes requeridos para el análisis financiero por agencia.
  - Implementar un flujo automatizado de procesamiento de datos mediante la herramienta KNIME para la integración, depuración y consolidación de la información proveniente de múltiples períodos contables.
@@ -47,4 +47,69 @@ se utilizará KNIME como herramienta principal para diseñar y ejecutar el flujo
 Posteriormente, los datos procesados serán visualizados en Power BI mediante un tablero interactivo que facilite la consulta y el análisis de los resultados financieros.
 
 De esta manera, el proyecto busca convertir datos contables dispersos en información útil para la toma de decisiones, aplicando técnicas de analítica de datos para mejorar la eficiencia del proceso y fortalecer la disponibilidad de información financiera para las diferentes áreas de la organización.
+
+# 2. Relación Beneficio Coste
+
+# 2.1 Análisis económico 
+
+El análisis de la relación beneficio-coste tiene como propósito identificar y evaluar los beneficios económicos, operativos y estratégicos que puede generar la implementación de una solución de Big Data para la transformación y análisis del estado de resultados (PyG) por agencias de Confiar, buscando optimizar el procesamiento de la información contable de la cooperativa mediante la automatización de actividades de extracción, limpieza, transformación y consolidación de datos, utilizando KNIME como herramienta de procesamiento y Power BI como herramienta de visualización.
+
+A partir de esta solución se espera reducir significativamente las actividades manuales, mejorar la oportunidad en la disponibilidad de la información a las diferentes áreas y Agencias, igualmente se busca facilitar el consolidado de la información financiera de toda la cooperativa.
+
+# 2.2 Beneficios económicos, operativos y estratégicos
+
+- Reducción significativa del tiempo destinado a la consolidación del informe mensual de los movimientos contables.
+- Disminución de actividades repetitivas relacionadas con la agrupación de cuentas.
+- Transformación del análisis operativo a la gestión estratégica, facilitando el monitoreo oportuno de los principales ingresos y gastos.
+- Reducción de reprocesos asociados a errores en la consolidación de información manual.
+- Mayor capacidad para procesar volúmenes de información de manera estructurada ya que constantemente Confiar se encuentra en expansión de Agencias.
+- Disponibilidad de información financiera organizada por agencia y periodo.
+- Identificación de comportamientos y tendencias en los resultados financieros de cada Agencia.
+- Automatización del proceso en la medida que se amplíen nuevos rubros contables y oficinas.
+
+# 2.3 Estimación relación beneficio- coste
+
+El principal beneficio cuantificable será el ahorro de tiempo operativo, debido a que la automatización permitirá disminuir la intervención manual en las actividades de consolidación, transformación y clasificación de los movimientos contables.
+
+Actualmente, estos informes implican actividades de manipulación, revisión, clasificación y agrupación de registros provenientes de diferentes archivos. Estas tareas demandan tiempo operativo y pueden generar reprocesos cuando se presentan inconsistencias en la información. Adicionalmente, el beneficio esperado no se limita al ahorro de tiempo, sino que también comprende mejoras en la calidad, disponibilidad, trazabilidad y aprovechamiento de la información financiera.
+
+### revisar con CARO si se pone el tiempo y costo con el ejm de un salario de lo que cuenta hacer este informe mensual
+
+# 3. Arquitectura propuesta
+
+![Arquitectura de la solución Big Data](./Arquitectura%20de%20solución.png)
+
+# 4. Pipeline de ingesta de datos
+
+Se implementó una arquitectura de datos basada en el modelo Medallion, estructurada en las capas Bronze, Silver y Gold. Este enfoque permite gestionar los datos de manera estructurada desde su origen, realizar los procesos de transformación que se requieren, y disponer finalmente de información confiable para el informe del Estado de Resultados por agencias.
+
+ **Bronze**: corresponde a la capa de entrada, donde se reciben los archivos contables provenientes del ERP, conservando la información de origen.
+
+**Silver**: comprende los procesos de limpieza, depuración, estandarización y transformación de los datos, garantizando una estructura homogénea y consistente.
+
+**Gold**: contiene la información consolidada y estructurada para el análisis financiero, permitiendo la construcción del estado de resultados (PyG) por agencias y periodos.
+
+# 4.1. Diseño del pipeline de ingesta
+
+El pipeline se diseñó para consolidar la información de los movimientos contables proveniente de nueve archivos Excel correspondientes al periodo enero-septiembre de 2026.
+
+La fuente de información contiene aproximadamente 475.000 registros distribuidos en 14 columnas. Cada archivo corresponde a un periodo mensual y contiene los movimientos contables que serán utilizados como insumo para el análisis financiero.
+
+# 4.2. Automatización de la ingesta mediante Workflow en KNIME
+
+La automatización del proceso se desarrolló mediante KNIME, herramienta mediante la cual se ejecutó un workflows a través de nodos interconectados que ejecutan las diferentes operaciones del procesamiento de datos.
+
+En este proyecto, el Workflow constituye la implementación técnica del pipeline diseñado, permitiendo integrar las actividades de lectura, estructuración, procesamiento y consolidación de los archivos contables dentro de un flujo de trabajo organizado. Cada nodo cumple una función específica permitiendo establecer una secuencia lógica de ejecución.
+
+El Workflow desarrollado en KNIME integra los componentes necesarios para procesar los archivos contables y consolidar la información correspondiente al periodo de análisis.
+
+### PEGAR FOTO DE FLUJO DE KNIME
+*Figura 2. Workflow implementado en KNIME.*
+
+Como resultado de esta etapa se consolida la información contable de los nueve meses analizados en una estructura única y homogénea, facilitando exportar dicho archivo para la visualización de los datos de manera gerencial. La implementación del workflow en KNIME permite automatizar el proceso de integración de la información, facilitando la actualización periódica, garantizando la disponibilidad inmediata de los informes y reduciendo la manualidad.
+
+# 5. Modelo de ciencia de datos
+
+
+
 
