@@ -1,4 +1,4 @@
-# Solución de Big Data aplicado al análisis del PyG de las Agencias Confiar.
+# Solución de Big Data para el análisis del PyG de las Agencias de COnfiar
 
 **Estudiantes:** Paola Duque Cardona
                  Ana Carolina Osorio 
