@@ -3,7 +3,7 @@
 **Estudiantes:** Paola Duque Cardona
                  Ana Carolina Osorio 
                  Yuliana Gomez Franco
-# 1. CASO DE NEGOCIO
+# 1. Caso de Negocio
 
 ## 1.1. Descripción del problema
 
@@ -109,6 +109,21 @@ El Workflow desarrollado en KNIME integra los componentes necesarios para proces
 Como resultado de esta etapa se consolida la información contable de los nueve meses analizados en una estructura única y homogénea, facilitando exportar dicho archivo para la visualización de los datos de manera gerencial. La implementación del workflow en KNIME permite automatizar el proceso de integración de la información, facilitando la actualización periódica, garantizando la disponibilidad inmediata de los informes y reduciendo la manualidad.
 
 # 5. Modelo de ciencia de datos
+
+El proyecto adopta un enfoque de analítica descriptiva y comparativa, orientado a identificar el comportamiento financiero de las agencias de Confiar a partir de los resultados de ingresos y gastos.
+
+Este modelo busca visibilizar:
+ 1. El comportamiento de ingresos y gastos por Agencias.
+ 2. Variaciones entre cada uno de los periodos
+ 3. Los conceptos o rubros contables con mayor impacto en el PyG final de la cooperativa.
+
+Los principales indicadores definidos son:
+
+- Total de ingresos por intereses: 
+- Total gastos por intereses:
+- Margen Neto por intereses
+- Excedentes
+- 
 
 
 
