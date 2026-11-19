@@ -123,7 +123,28 @@ Los principales indicadores definidos son:
 - Total gastos por intereses:
 - Margen Neto por intereses
 - Excedentes
-- 
+
+
+Ranking de mayor excedente:
+Ranking Mayor Excedente =
+RANKX(
+    ALLSELECTED(Tabla[Agencia]),
+    [Excedente],
+    ,
+    DESC,
+    DENSE
+)
+
+
+Ranking de menor excedente:
+Ranking Menor Excedente =
+RANKX(
+    ALLSELECTED(Tabla[Agencia]),
+    [Excedente],
+    ,
+    ASC,
+    DENSE
+)
 
 
 
