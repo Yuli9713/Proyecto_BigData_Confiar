@@ -82,7 +82,7 @@ Actualmente, estos informes implican actividades de manipulación, revisión, cl
 
 # 3. Arquitectura propuesta
 
-![Arquitectura de la solución Big Data](./Arquitectura%20de%20solución.png)  
+![Arquitectura de la solución Big Data](./Arquitectura%20de%20solución.png.pdf)  
 
 # 4. Pipeline de ingesta de datos
 
@@ -108,7 +108,7 @@ En este proyecto, el Workflow constituye la implementación técnica del pipelin
 
 El Workflow desarrollado en KNIME integra los componentes necesarios para procesar los archivos contables y consolidar la información correspondiente al periodo de análisis.
 
-### PEGAR FOTO DE FLUJO DE KNIME
+![Coste Beneficio](Coste%20beneficio.jpeg)
 *Figura 2. Workflow implementado en KNIME.*
 
 Como resultado de esta etapa se consolida la información contable de los nueve meses analizados en una estructura única y homogénea, facilitando exportar dicho archivo para la visualización de los datos de manera gerencial. La implementación del workflow en KNIME permite automatizar el proceso de integración de la información, facilitando la actualización periódica, garantizando la disponibilidad inmediata de los informes y reduciendo la manualidad.
