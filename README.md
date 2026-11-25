@@ -70,7 +70,7 @@ A partir de esta solución se espera reducir significativamente las actividades 
 - Identificación de comportamientos y tendencias en los resultados financieros de cada Agencia.
 - Automatización del proceso en la medida que se amplíen nuevos rubros contables y oficinas.
 
-
+![Coste Beneficio](Coste%20beneficio.jpeg)
 
 # 2.3 Estimación relación beneficio- coste
 
