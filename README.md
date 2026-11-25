@@ -83,6 +83,8 @@ Actualmente, estos informes implican actividades de manipulación, revisión, cl
 # 3. Arquitectura propuesta
 
 ![Arquitectura de la solución Big Data](./Arquitectura%20de%20solución.png.pdf)  
+![WorkflowKNIME.png ]
+![TableropowerBI.png ]
 
 # 4. Pipeline de ingesta de datos
 
