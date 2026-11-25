@@ -9,9 +9,11 @@
 
 En las entidades financieras se generan grandes volúmenes de información contable que requieren procesos de extracción, transformación, clasificación y análisis para convertir los datos en información útil para la toma de decisiones. 
 En Confiar Cooperativa Financiera, la información contable es gestionada mediante el ERP institucional, el cual registra los movimientos contables generados por las diferentes Agencias. De forma mensual, el sistema genera informes de libros auxiliares que contienen el detalle de cada movimiento contable realizado durante el período.
-Aunque estos reportes constituyen una fuente valiosa de información para el análisis financiero, los datos se encuentran sin una estructura para el análisis gerencial, por lo que es necesario realizar procesos de consolidación, clasificación y transformación antes de obtener información útil para la toma de decisiones.
+Aunque estos reportes constituyen una fuente valiosa de información para el análisis financiero, su estructura está orientada al registro y control contable, por lo que requieren procesos adicionales de depuración, clasificación, consolidación y agrupación para facilitar su interpretación desde una perspectiva gerencial.
 
-Por lo anterior, se plantea desarrollar una solución que permita automatizar el procesamiento de los libros auxiliares contables, estructurar la información y facilitar la construcción del estado de resultados por cada una de las Agencias en su respectivo periodo, mediante herramientas de analítica de datos y visualización.
+Actualmente, la transformación de estas bases de datos representa una oportunidad de mejora en términos de eficiencia operativa, estandarización de procesos y oportunidad de la información en tiempo real para el seguimiento diario de las metas.
+
+Por lo anterior, se plantea desarrollar una solución de procesamiento y analítica de datos que permita automatizar el transformación de los libros auxiliares contables, estructurar la información y facilitar la construcción del estado de resultados (PyG) por cada una de las Agencias en su respectivo periodo, mediante herramientas de analítica de datos y visualización.
 
 ## Objetivo General
 Diseñar e implementar una solución para el procesamiento y análisis de datos que permita automatizar la transformación, clasificación y consolidación de los movimientos contables de Confiar Cooperativa Financiera, con el propósito de facilitar la construcción y análisis del estado de resultados por agencias y periodos, apoyando la toma de decisiones mediante herramientas de analítica y visualización.
@@ -25,10 +27,11 @@ Diseñar e implementar una solución para el procesamiento y análisis de datos 
 
 ## 1.4. Alcance del proyecto
 
-El proyecto transforma los libros auxiliares contables correspondientes a diferentes periodos de Confiar Cooperativa Financiera en un modelo de Perdidas y ganancias (PyG)
+El proyecto comprende el procesamiento de los libros auxiliares contables correspondientes a los periodos analizados de Confiar Cooperativa Financiera, con el propósito de estructurar y consolidar la información necesaria para la construcción del estado de resultados (PyG) por agencia.
 
 La solución comprende las siguientes actividades:
 
+- Ingesta e integración de los archivos contables provenientes del ERP institucional.
 - Consolidación de los archivos que contienen la información contable.
 - Validación de la estructura y calidad de los datos.
 - Limpieza y estandarización de los campos necesarios para el análisis.
@@ -67,6 +70,8 @@ A partir de esta solución se espera reducir significativamente las actividades 
 - Identificación de comportamientos y tendencias en los resultados financieros de cada Agencia.
 - Automatización del proceso en la medida que se amplíen nuevos rubros contables y oficinas.
 
+
+
 # 2.3 Estimación relación beneficio- coste
 
 El principal beneficio cuantificable será el ahorro de tiempo operativo, debido a que la automatización permitirá disminuir la intervención manual en las actividades de consolidación, transformación y clasificación de los movimientos contables.
@@ -77,7 +82,7 @@ Actualmente, estos informes implican actividades de manipulación, revisión, cl
 
 # 3. Arquitectura propuesta
 
-![Arquitectura de la solución Big Data](./Arquitectura%20de%20solución.png)
+![Arquitectura de la solución Big Data](./Arquitectura%20de%20solución.png)  
 
 # 4. Pipeline de ingesta de datos
 
