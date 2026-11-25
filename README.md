@@ -122,12 +122,14 @@ Este modelo busca visibilizar:
  2. Variaciones entre cada uno de los periodos
  3. Los conceptos o rubros contables con mayor impacto en el PyG final de la cooperativa.
 
-Los principales indicadores definidos son:
+Los principales indicadores definidos para el análisis son:
 
-- Total de ingresos por intereses: 
-- Total gastos por intereses:
-- Margen Neto por intereses
-- Excedentes
+- Total de ingresos por intereses: representa los ingresos generados por la actividad de intermediación financiera.
+- Total de gastos por intereses: corresponde a los costos asociados a los recursos financieros captados.
+- Margen neto de intereses: diferencia entre los ingresos y los gastos por intereses.
+- Total de ingresos: valor consolidado de los ingresos registrados en el periodo.
+- Total de gastos: valor consolidado de los gastos registrados en el periodo.
+- Excedentes: resultado de la diferencia entre los ingresos y los gastos, de acuerdo con la estructura contable definida para el PyG.
 
 
 Ranking de mayor excedente:
