@@ -133,7 +133,7 @@ Los principales indicadores definidos para el análisis son:
 
 Al interpretar los resultados, se debe tener en cuenta que la Dirección General registra el excedente más negativo. Esto obedece a que por política de la Cooperativa, esta unidad asume los gastos relacionados con la capacidad instalada, la infraestructura y el soporte corporativo que respaldan la operación de todas las oficinas, por lo que su resultado no es directamente comparable con el de las demás agencias.
 
-# 5. Desarrollo del tablero de visualización en Power BI
+# 6. Desarrollo del tablero de visualización en Power BI
 
 ![Tablero Power BI](./TableropowerBI.png)
 *Figura 4. Tablero PowerBI*
@@ -148,7 +148,7 @@ La integración entre KNIME y Power BI permite establecer un proceso estructurad
 
 En términos gerenciales, esta solución contribuye a fortalecer la disponibilidad de información financiera, facilitar el seguimiento de los resultados y proporcionar elementos de análisis para apoyar la toma de decisiones para la gerencia.
 
-# 6. Conclusiones
+# 7. Conclusiones
 
 1. El desarrollo del proyecto permitió identificar y estructurar las variables necesarias para la construcción del Estado de Resultados a partir de los libros auxiliares generados por el ERP institucional. Mediante el proceso de depuración, estandarización y clasificación de las cuentas contables, se logró consolidar la información de nueve periodos mensuales, correspondientes a aproximadamente 475.000 registros. Esto permitió transformar archivos originalmente orientados al registro contable en una estructura organizada para el análisis y visualización financiera por Agencia y periodo.
 
