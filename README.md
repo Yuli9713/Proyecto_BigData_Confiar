@@ -55,7 +55,7 @@ De esta manera, el proyecto busca convertir datos contables dispersos en informa
 
 # 2.1 Análisis económico 
 
-El análisis de la relación beneficio-coste tiene como propósito identificar y evaluar los beneficios económicos, operativos y estratégicos que puede generar la implementación de una solución de Big Data para la transformación y análisis del estado de resultados (PyG) por agencias de Confiar, buscando optimizar el procesamiento de la información contable de la cooperativa mediante la automatización de actividades de extracción, limpieza, transformación y consolidación de datos, utilizando KNIME como herramienta de procesamiento y Power BI como herramienta de visualización.
+El análisis de la relación beneficio-coste tiene como propósito identificar y evaluar los beneficios económicos, operativos y estratégicos que puede generar la implementación de una solución de Big Data para la transformación y análisis del estado de resultados (PyG) por agencias de Confiar, con el propósito de optimizar el procesamiento de la información contable de la cooperativa mediante la automatización de actividades de extracción, limpieza, transformación y consolidación de datos, utilizando KNIME como herramienta de procesamiento y Power BI como herramienta de visualización.
 
 A partir de esta solución se espera reducir significativamente las actividades manuales, mejorar la oportunidad en la disponibilidad de la información a las diferentes áreas y Agencias, igualmente se busca facilitar el consolidado de la información financiera de toda la cooperativa.
 
@@ -65,7 +65,7 @@ A partir de esta solución se espera reducir significativamente las actividades 
 - Disminución de actividades repetitivas relacionadas con la agrupación de cuentas.
 - Transformación del análisis operativo a la gestión estratégica, facilitando el monitoreo oportuno de los principales ingresos y gastos.
 - Reducción de reprocesos asociados a errores en la consolidación de información manual.
-- Mayor capacidad para procesar volúmenes de información de manera estructurada ya que constantemente Confiar se encuentra en expansión de Agencias.
+- Mayor capacidad para procesar volúmenes de información de manera estructurada, teniendo en cuenta que Confiar se encuentra en expansión de Agencias.
 - Disponibilidad de información financiera organizada por agencia y periodo.
 - Identificación de comportamientos y tendencias en los resultados financieros de cada Agencia.
 - Automatización del proceso en la medida que se amplíen nuevos rubros contables y oficinas.
@@ -94,13 +94,15 @@ Se implementó una arquitectura de datos basada en el modelo Medallion, estructu
 
 # 4.1. Diseño del pipeline de ingesta
 
-El pipeline se diseñó para consolidar la información de los movimientos contables proveniente de nueve archivos Excel correspondientes al periodo enero-septiembre de 2026.
+El pipeline se diseñó para consolidar la información de los movimientos contables provenientes de nueve archivos Excel correspondientes al periodo enero-septiembre de 2026.
 
 La fuente de información contiene aproximadamente 475.000 registros distribuidos en 14 columnas. Cada archivo corresponde a un periodo mensual y contiene los movimientos contables que serán utilizados como insumo para el análisis financiero.
 
+A partir de esta solución se espera reducir las actividades manuales, mejorar la oportunidad en la disponibilidad de la información para las diferentes áreas y Agencias y facilitar la consolidación de la información financiera de la Cooperativa.
+
 # 4.2. Automatización de la ingesta mediante Workflow en KNIME
 
-La automatización del proceso se desarrolló mediante KNIME, herramienta mediante la cual se ejecutó un workflows a través de nodos interconectados que ejecutan las diferentes operaciones del procesamiento de datos.
+La automatización del proceso se desarrolló mediante KNIME, herramienta que permite diseñar y ejecutar workflows a través de nodos interconectados, encargados de realizar las diferentes operaciones de procesamiento y transformación de datos.
 
 En este proyecto, el Workflow constituye la implementación técnica del pipeline diseñado, permitiendo integrar las actividades de lectura, estructuración, procesamiento y consolidación de los archivos contables dentro de un flujo de trabajo organizado. Cada nodo cumple una función específica permitiendo establecer una secuencia lógica de ejecución.
 
@@ -109,7 +111,7 @@ El Workflow desarrollado en KNIME integra los componentes necesarios para proces
 ![Workflow KNIME](./WorkflowKNIME.png)
 *Figura 3. Workflow implementado en KNIME.*
 
-Como resultado de esta etapa se consolida la información contable de los nueve meses analizados en una estructura única y homogénea, facilitando exportar dicho archivo para la visualización de los datos de manera gerencial. La implementación del workflow en KNIME permite automatizar el proceso de integración de la información, facilitando la actualización periódica, garantizando la disponibilidad inmediata de los informes y reduciendo la manualidad.
+Como resultado de esta etapa, se consolidó la información contable de los nueve meses analizados en una estructura única y homogénea, facilitando su exportación para la posterior visualización y análisis gerencial. La implementación del workflow en KNIME permite automatizar la integración de la información, facilitar su actualización periódica y reducir la intervención manual en el procesamiento de los archivos contables..
 
 # 5. Modelo de ciencia de datos
 
@@ -142,7 +144,7 @@ Posterior al proceso de transformación y consolidación de los datos mediante K
 
 El tablero permite convertir los movimientos contables procesados en información visual y estructurada, facilitando la interpretación de los resultados financieros y mostrando en tiempo real las cifras claves para el seguimiento de indicadores.
 
-La herramienta permite interactuar con la información mediante filtros y segmentaciones, facilitando el análisis desde diferentes perspectivas y niveles de detalle. De esta manera, los usuarios pueden realizar el seguimiento a su PyG durante el periodo y tomar las medidas que consideren necesarias para no generar pérdidas en su Agencia.
+La herramienta permite interactuar con los datos mediante filtros y segmentaciones, facilitando el análisis desde diferentes perspectivas y niveles de detalle. De esta manera, los responsables de las Agencias pueden consultar el comportamiento de su PyG durante el periodo, identificar variaciones en los ingresos y gastos y contar con información que facilite la definición de acciones para mejorar su desempeño financiero.
 
 La integración entre KNIME y Power BI permite establecer un proceso estructurado en el que la primera herramienta se encarga del procesamiento y transformación de los datos, mientras que la segunda facilita la visualización de la gestión financiera.
 
@@ -158,6 +160,6 @@ En términos gerenciales, esta solución contribuye a fortalecer la disponibilid
 
 # 7. Referencias.
 
-- Databricks. (s. f.). What is the medallion lakehouse architecture? Microsoft Learn. https://learn.microsoft.com/en-us/azure/databricks/lakehouse/medallion
+- Databricks. (s. f.). What is the medallion lakehouse architecture? https://learn.microsoft.com/en-us/azure/databricks/lakehouse/medallion
 - KNIME. (s. f.). KNIME Analytics Platform documentation. https://docs.knime.com/ap/latest/
-- Microsoft. (s. f.). Overview of Power BI reports. Microsoft Learn. https://learn.microsoft.com/en-us/power-bi/create-reports/power-bi-reports-overview
+- Microsoft. (s. f.). Overview of Power BI reports. Microsoft Learn. https://learn.microsoft.com/en-us/power-bi/create-reports/power-bi-reports-overview.
