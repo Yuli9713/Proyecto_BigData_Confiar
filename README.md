@@ -13,7 +13,7 @@ Aunque estos reportes constituyen una fuente valiosa de información para el an�
 
 Actualmente, la transformación de estas bases de datos representa una oportunidad de mejora en términos de eficiencia operativa, estandarización de procesos y oportunidad de la información en tiempo real para el seguimiento diario de las metas.
 
-Por lo anterior, se plantea desarrollar una solución de procesamiento y analítica de datos que permita automatizar el transformación de los libros auxiliares contables, estructurar la información y facilitar la construcción del estado de resultados (PyG) por cada una de las Agencias en su respectivo periodo, mediante herramientas de analítica de datos y visualización.
+Por lo anterior, se plantea desarrollar una solución de procesamiento y analítica de datos que permita automatizar la transformación de los libros auxiliares contables, estructurar la información y facilitar la construcción del estado de resultados (PyG) por cada una de las Agencias en su respectivo periodo, mediante herramientas de analítica de datos y visualización.
 
 ## Objetivo General
 Diseñar e implementar una solución para el procesamiento y análisis de datos que permita automatizar la transformación, clasificación y consolidación de los movimientos contables de Confiar Cooperativa Financiera, con el propósito de facilitar la construcción y análisis del estado de resultados por agencias y periodos, apoyando la toma de decisiones mediante herramientas de analítica y visualización.
@@ -77,11 +77,11 @@ El principal beneficio cuantificable será el ahorro de tiempo operativo, debido
 Actualmente, estos informes implican actividades de manipulación, revisión, clasificación y agrupación de registros provenientes de diferentes archivos. Estas tareas demandan tiempo operativo y pueden generar reprocesos cuando se presentan inconsistencias en la información. Adicionalmente, el beneficio esperado no se limita al ahorro de tiempo, sino que también comprende mejoras en la calidad, disponibilidad, trazabilidad y aprovechamiento de la información financiera.
 
 ![Coste Beneficio](Coste%20beneficio.jpeg)
-
+*Figura 1. Coste/Beneficio*
 # 3. Arquitectura propuesta
 
 ![Arquitectura de la solución Big Data](./Arquitectura.png)
-
+*Figura 2. Arquitectura de la solución*
 # 4. Pipeline de ingesta de datos
 
 Se implementó una arquitectura de datos basada en el modelo Medallion, estructurada en las capas Bronze, Silver y Gold. Este enfoque permite gestionar los datos de manera estructurada desde su origen, realizar los procesos de transformación que se requieren, y disponer finalmente de información confiable para el informe del Estado de Resultados por agencias.
@@ -107,7 +107,7 @@ En este proyecto, el Workflow constituye la implementación técnica del pipelin
 El Workflow desarrollado en KNIME integra los componentes necesarios para procesar los archivos contables y consolidar la información correspondiente al periodo de análisis.
 
 ![Workflow KNIME](./WorkflowKNIME.png)
-*Figura 2. Workflow implementado en KNIME.*
+*Figura 3. Workflow implementado en KNIME.*
 
 Como resultado de esta etapa se consolida la información contable de los nueve meses analizados en una estructura única y homogénea, facilitando exportar dicho archivo para la visualización de los datos de manera gerencial. La implementación del workflow en KNIME permite automatizar el proceso de integración de la información, facilitando la actualización periódica, garantizando la disponibilidad inmediata de los informes y reduciendo la manualidad.
 
@@ -122,17 +122,42 @@ Este modelo busca visibilizar:
 
 Los principales indicadores definidos para el análisis son:
 
-- Total de ingresos por intereses: representa los ingresos generados por la actividad de intermediación financiera.
-- Total de gastos por intereses: corresponde a los costos asociados a los recursos financieros captados.
-- Margen neto de intereses: diferencia entre los ingresos y los gastos por intereses.
-- Total de ingresos: valor consolidado de los ingresos registrados en el periodo.
-- Total de gastos: valor consolidado de los gastos registrados en el periodo.
+- Total de ingresos por intereses.
+- Total de gastos por intereses.
+- Total de ingresos financieros diferentes de intereses.
+- Total de gastos financieros diferentes de intereses.
+- Recuperaciones provisiones del periodo.
+- Gastos administrativos.
+- Depreciaciones y amortizaciones. 
 - Excedentes: resultado de la diferencia entre los ingresos y los gastos, de acuerdo con la estructura contable definida para el PyG.
 
-# 5. APP o visualización
+Al interpretar los resultados, se debe tener en cuenta que la Dirección General registra el excedente más negativo. Esto obedece a que por política de la Cooperativa, esta unidad asume los gastos relacionados con la capacidad instalada, la infraestructura y el soporte corporativo que respaldan la operación de todas las oficinas, por lo que su resultado no es directamente comparable con el de las demás agencias.
+
+# 5. Desarrollo del tablero de visualización en Power BI
 
 ![Tablero Power BI](./TableropowerBI.png)
+*Figura 4. Tablero PowerBI*
 
-El tablero
+Posterior al proceso de transformación y consolidación de los datos mediante KNIME, se desarrolló un tablero interactivo en Power BI, cuyo propósito es facilitar el análisis y seguimiento del Estado de Resultados (PyG) de las Agencias de Confiar Cooperativa Financiera.
 
+El tablero permite convertir los movimientos contables procesados en información visual y estructurada, facilitando la interpretación de los resultados financieros y mostrando en tiempo real las cifras claves para el seguimiento de indicadores.
 
+La herramienta permite interactuar con la información mediante filtros y segmentaciones, facilitando el análisis desde diferentes perspectivas y niveles de detalle. De esta manera, los usuarios pueden realizar el seguimiento a su PyG durante el periodo y tomar las medidas que consideren necesarias para no generar pérdidas en su Agencia.
+
+La integración entre KNIME y Power BI permite establecer un proceso estructurado en el que la primera herramienta se encarga del procesamiento y transformación de los datos, mientras que la segunda facilita la visualización de la gestión financiera.
+
+En términos gerenciales, esta solución contribuye a fortalecer la disponibilidad de información financiera, facilitar el seguimiento de los resultados y proporcionar elementos de análisis para apoyar la toma de decisiones para la gerencia.
+
+# 6. Conclusiones
+
+1. El desarrollo del proyecto permitió identificar y estructurar las variables necesarias para la construcción del Estado de Resultados a partir de los libros auxiliares generados por el ERP institucional. Mediante el proceso de depuración, estandarización y clasificación de las cuentas contables, se logró consolidar la información de nueve periodos mensuales, correspondientes a aproximadamente 475.000 registros. Esto permitió transformar archivos originalmente orientados al registro contable en una estructura organizada para el análisis y visualización financiera por Agencia y periodo.
+
+2.La implementación del workflow en KNIME permitió integrar y automatizar las actividades de lectura, procesamiento, transformación y consolidación de los archivos contables. Esta solución establece un flujo de trabajo replicable y facilita la actualización de la información cuando se incorporan nuevos periodos, centros de costos, adicional que reduce la dependencia de actividades manuales y contribuye a disminuir los riesgos de errores y reprocesos asociados a la manipulación de múltiples archivos y formulas de excel.
+
+3. La construcción del tablero en Power BI permitió disponer de una herramienta para consultar el comportamiento de los ingresos, gastos, margen neto de intereses y excedentes por Agencia y periodo. La integración de KNIME y Power BI demuestra cómo las herramientas de analítica de datos contribuyen al seguimiento y análisis gerencial, fortaleciendo la capacidad de identificar variaciones, comparar resultados y apoyar la toma de decisiones financieras en Confiar Cooperativa Financiera.
+
+# 7. Referencias.
+
+- Databricks. (s. f.). What is the medallion lakehouse architecture? Microsoft Learn. https://learn.microsoft.com/en-us/azure/databricks/lakehouse/medallion
+- KNIME. (s. f.). KNIME Analytics Platform documentation. https://docs.knime.com/ap/latest/
+- Microsoft. (s. f.). Overview of Power BI reports. Microsoft Learn. https://learn.microsoft.com/en-us/power-bi/create-reports/power-bi-reports-overview
