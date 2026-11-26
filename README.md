@@ -70,21 +70,17 @@ A partir de esta solución se espera reducir significativamente las actividades 
 - Identificación de comportamientos y tendencias en los resultados financieros de cada Agencia.
 - Automatización del proceso en la medida que se amplíen nuevos rubros contables y oficinas.
 
-![Coste Beneficio](Coste%20beneficio.jpeg)
-
 # 2.3 Estimación relación beneficio- coste
 
 El principal beneficio cuantificable será el ahorro de tiempo operativo, debido a que la automatización permitirá disminuir la intervención manual en las actividades de consolidación, transformación y clasificación de los movimientos contables.
 
 Actualmente, estos informes implican actividades de manipulación, revisión, clasificación y agrupación de registros provenientes de diferentes archivos. Estas tareas demandan tiempo operativo y pueden generar reprocesos cuando se presentan inconsistencias en la información. Adicionalmente, el beneficio esperado no se limita al ahorro de tiempo, sino que también comprende mejoras en la calidad, disponibilidad, trazabilidad y aprovechamiento de la información financiera.
 
-### revisar con CARO si se pone el tiempo y costo con el ejm de un salario de lo que cuenta hacer este informe mensual
+![Coste Beneficio](Coste%20beneficio.jpeg)
 
 # 3. Arquitectura propuesta
 
-![Arquitectura de la solución Big Data](./Arquitectura%20de%20solución.png.pdf)  
-![WorkflowKNIME.png ]
-![TableropowerBI.png ]
+![Arquitectura de la solución Big Data](./Arquitectura.png)
 
 # 4. Pipeline de ingesta de datos
 
@@ -110,7 +106,7 @@ En este proyecto, el Workflow constituye la implementación técnica del pipelin
 
 El Workflow desarrollado en KNIME integra los componentes necesarios para procesar los archivos contables y consolidar la información correspondiente al periodo de análisis.
 
-![Coste Beneficio](Coste%20beneficio.jpeg)
+![Workflow KNIME](./WorkflowKNIME.png)
 *Figura 2. Workflow implementado en KNIME.*
 
 Como resultado de esta etapa se consolida la información contable de los nueve meses analizados en una estructura única y homogénea, facilitando exportar dicho archivo para la visualización de los datos de manera gerencial. La implementación del workflow en KNIME permite automatizar el proceso de integración de la información, facilitando la actualización periódica, garantizando la disponibilidad inmediata de los informes y reduciendo la manualidad.
@@ -133,28 +129,10 @@ Los principales indicadores definidos para el análisis son:
 - Total de gastos: valor consolidado de los gastos registrados en el periodo.
 - Excedentes: resultado de la diferencia entre los ingresos y los gastos, de acuerdo con la estructura contable definida para el PyG.
 
+# 5. APP o visualización
 
-Ranking de mayor excedente:
-Ranking Mayor Excedente =
-RANKX(
-    ALLSELECTED(Tabla[Agencia]),
-    [Excedente],
-    ,
-    DESC,
-    DENSE
-)
+![Tablero Power BI](./TableropowerBI.png)
 
-
-Ranking de menor excedente:
-Ranking Menor Excedente =
-RANKX(
-    ALLSELECTED(Tabla[Agencia]),
-    [Excedente],
-    ,
-    ASC,
-    DENSE
-)
-
-
+El tablero
 
 
